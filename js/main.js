@@ -94,11 +94,6 @@
       const top  = target.getBoundingClientRect().top + window.scrollY - navH - 8;
 
       window.scrollTo({ top, behavior: 'smooth' });
-
-      // Accessibility: move focus to section
-      target.setAttribute('tabindex', '-1');
-      target.addEventListener('transitionend', () => target.focus({ preventScroll: true }), { once: true });
-      setTimeout(() => target.focus({ preventScroll: true }), 600);
     });
   });
 })();
