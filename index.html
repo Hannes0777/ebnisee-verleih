@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tretbootverleih am Ebnisee in Kaisersbach – Tretboote, Ruderboote, Rutschentretboote und Stand-Up Paddle mieten. Mai bis September.">
-  <title>Tretbootverleih Ebnisee – Kaisersbach</title>
+  <meta name="description" content="Rader's Waldschänke & Bootsvermietung am Ebnisee in Kaisersbach – Biergarten, Tretboote, Ruderboote, Rutschenboote und Stand-Up Paddle. Familienbesitz seit 1963.">
+  <title>Rader's Waldschänke &amp; Bootsvermietung – Ebnisee Kaisersbach</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +12,8 @@
 
   <link rel="stylesheet" href="css/style.css">
 
-  <meta property="og:title" content="Tretbootverleih Ebnisee – Kaisersbach">
-  <meta property="og:description" content="Tretboote, Ruderboote, Rutschentretboote & Stand-Up Paddle am Ebnisee mieten.">
+  <meta property="og:title" content="Rader's Waldschänke & Bootsvermietung am Ebnisee">
+  <meta property="og:description" content="Biergarten, Tretboote, Ruderboote & SUP am Ebnisee. Seit 1963 in Familienbesitz.">
   <meta property="og:type" content="website">
 </head>
 <body>
@@ -26,15 +26,16 @@
   <header id="main-nav" class="nav nav--transparent" role="banner">
     <div class="container nav__inner">
 
-      <a href="#hero" class="nav__logo" aria-label="Tretbootverleih Ebnisee – Startseite">
-        <span class="nav__logo-icon" aria-hidden="true">
-          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17 5 L21 19 L13 19 Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="currentColor" fill-opacity="0.12"/>
-            <path d="M10 19 Q17 24 24 19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-            <path d="M5 26 C10 21 14 29 19 26 C22 24 26 21 29 26" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.55"/>
-          </svg>
-        </span>
-        <span class="nav__logo-text">Ebnisee <strong>Verleih</strong></span>
+      <a href="#hero" class="nav__logo" aria-label="Rader's Waldschänke & Bootsvermietung – Startseite">
+        <!-- Logo-Bild (wird weiß im Hero, normal im scrolled Nav) -->
+        <img
+          src="assets/images/logo.png"
+          alt="Rader's Waldschänke &amp; Bootsvermietung am Ebnisee"
+          class="nav__logo-img"
+          onerror="this.style.display='none';document.querySelector('.nav__logo-fallback').style.display='block'"
+        >
+        <!-- Fallback-Text falls Logo-Datei noch nicht vorhanden -->
+        <span class="nav__logo-fallback nav__logo-text">Rader's <strong>Waldschänke</strong></span>
       </a>
 
       <button id="nav-toggle" class="nav__toggle" aria-label="Navigation öffnen" aria-expanded="false" aria-controls="nav-menu">
@@ -45,7 +46,8 @@
 
       <nav id="nav-menu" class="nav__menu" aria-label="Hauptnavigation">
         <ul role="list">
-          <li><a href="#boote-preise" class="nav__link">Boote &amp; Preise</a></li>
+          <li><a href="#bootsvermietung" class="nav__link">Bootsvermietung</a></li>
+          <li><a href="#biergarten" class="nav__link">Biergarten</a></li>
           <li><a href="#anfahrt" class="nav__link">Anfahrt</a></li>
           <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
           <li><a href="#kontakt" class="btn btn--primary btn--sm nav__cta">Anfragen</a></li>
@@ -60,27 +62,28 @@
     <!-- ================================================
          HERO
          ================================================ -->
-    <section id="hero" class="hero" aria-label="Willkommen beim Tretbootverleih Ebnisee">
+    <section id="hero" class="hero" aria-label="Willkommen bei Rader's Waldschänke & Bootsvermietung">
       <div class="container hero__content">
 
         <p class="hero__eyebrow">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><line x1="12" y1="8" x2="12" y2="8.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="12" y1="12" x2="12" y2="16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          Saison Mai – September &nbsp;·&nbsp; Ebnisee, Kaisersbach
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg>
+          Klösterle 100 &nbsp;·&nbsp; 73667 Kaisersbach &nbsp;·&nbsp; Seit 1963
         </p>
 
         <h1 class="hero__headline">
-          Raus aufs<br>
-          <em>Wasser.</em>
+          Waldschänke &amp;<br>
+          <em>Bootsvermietung.</em>
         </h1>
 
         <p class="hero__sub">
-          Tretboote, Ruderboote, Rutschentretboote und Stand-Up Paddle —
-          direkt am Ebnisee, mitten im Schwäbisch-Fränkischen Wald.
+          Biergarten mit 280 Sitzplätzen, Liegewiese und Seeblick — dazu Tretboote,
+          Ruderboote, Rutschenboote und Stand-Up Paddle direkt am Ebnisee.
+          Seit vier Generationen in Familienbesitz.
         </p>
 
         <div class="hero__cta-group">
-          <a href="#boote-preise" class="btn btn--white btn--lg">Boote entdecken</a>
-          <a href="#kontakt" class="btn btn--outline-white btn--lg">Anfrage stellen</a>
+          <a href="#bootsvermietung" class="btn btn--white btn--lg">Boote entdecken</a>
+          <a href="#biergarten" class="btn btn--outline-white btn--lg">Zum Biergarten</a>
         </div>
 
         <div class="hero__stats" aria-label="Highlights">
@@ -90,13 +93,13 @@
           </div>
           <div class="hero__stat-divider" aria-hidden="true"></div>
           <div class="hero__stat">
-            <span class="hero__stat-num">ab 7&thinsp;€</span>
-            <span class="hero__stat-label">pro 30 Min.</span>
+            <span class="hero__stat-num">280</span>
+            <span class="hero__stat-label">Sitzplätze</span>
           </div>
           <div class="hero__stat-divider" aria-hidden="true"></div>
           <div class="hero__stat">
-            <span class="hero__stat-num">2–4</span>
-            <span class="hero__stat-label">Pers. / Boot</span>
+            <span class="hero__stat-num">1963</span>
+            <span class="hero__stat-label">Familienbesitz</span>
           </div>
         </div>
       </div>
@@ -116,45 +119,17 @@
     </section>
 
     <!-- ================================================
-         BOOTE & PREISE
+         BOOTSVERMIETUNG & PREISE
          ================================================ -->
-    <section id="boote-preise" class="section section--sand" aria-labelledby="boote-heading">
+    <section id="bootsvermietung" class="section section--sand" aria-labelledby="boote-heading">
       <div class="container">
 
         <header class="section__header">
-          <h2 id="boote-heading" class="section__title reveal">Unsere Boote &amp; Preise</h2>
-          <p class="section__sub reveal">Für jede Gruppe das passende Boot — einfach vorbeikommen und loslegen.</p>
+          <h2 id="boote-heading" class="section__title reveal">Bootsvermietung</h2>
+          <p class="section__sub reveal">Am südlichen Ufer des Ebnisees — für Familien, Paare und Gruppen. Reservierung ab 5 Booten möglich.</p>
         </header>
 
         <ul class="boats-grid" role="list">
-
-          <!-- Tretboot -->
-          <li class="boat-card reveal" aria-label="Tretboot">
-            <div class="boat-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 100 72" fill="none" xmlns="http://www.w3.org/2000/svg" width="90">
-                <path d="M12 46 Q50 62 88 46 L83 56 Q50 70 17 56 Z" fill="#1B4D6E" fill-opacity="0.12" stroke="#1B4D6E" stroke-width="2" stroke-linejoin="round"/>
-                <rect x="32" y="28" width="36" height="18" rx="5" fill="white" stroke="#1B4D6E" stroke-width="2"/>
-                <rect x="38" y="32" width="10" height="10" rx="2" fill="#EAF4FC"/>
-                <rect x="52" y="32" width="10" height="10" rx="2" fill="#EAF4FC"/>
-                <circle cx="50" cy="46" r="11" stroke="#2D9CDB" stroke-width="2.2" fill="none"/>
-                <line x1="50" y1="35" x2="50" y2="57" stroke="#2D9CDB" stroke-width="1.5"/>
-                <line x1="39" y1="46" x2="61" y2="46" stroke="#2D9CDB" stroke-width="1.5"/>
-                <ellipse cx="39" cy="46" rx="5" ry="2.5" fill="#2D9CDB" fill-opacity="0.7"/>
-                <ellipse cx="61" cy="46" rx="5" ry="2.5" fill="#2D9CDB" fill-opacity="0.7"/>
-              </svg>
-            </div>
-            <h3 class="boat-card__name">Tretboot</h3>
-            <p class="boat-card__capacity">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              2–4 Personen
-            </p>
-            <p class="boat-card__desc">Entspannt übers Wasser gleiten — der Klassiker für Familien und Paare.</p>
-            <div class="boat-card__prices">
-              <div class="price-chip"><span>30 Min.</span><strong>8 €</strong></div>
-              <div class="price-chip"><span>60 Min.</span><strong>14 €</strong></div>
-            </div>
-            <a href="#kontakt" class="btn btn--outline btn--sm boat-card__cta">Anfragen</a>
-          </li>
 
           <!-- Ruderboot -->
           <li class="boat-card reveal" aria-label="Ruderboot">
@@ -172,18 +147,46 @@
             <h3 class="boat-card__name">Ruderboot</h3>
             <p class="boat-card__capacity">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              2–4 Personen
+              bis 4 Personen
             </p>
-            <p class="boat-card__desc">Kraftvoll und direkt — das klassische Rudererlebnis am glasklaren Ebnisee.</p>
+            <p class="boat-card__desc">Romantisch und ursprünglich — das klassische Rudererlebnis auf dem glasklaren Ebnisee.</p>
             <div class="boat-card__prices">
-              <div class="price-chip"><span>30 Min.</span><strong>7 €</strong></div>
-              <div class="price-chip"><span>60 Min.</span><strong>12 €</strong></div>
+              <div class="price-chip"><span>30 Min.</span><strong>6 €</strong></div>
+              <div class="price-chip"><span>60 Min.</span><strong>11 €</strong></div>
             </div>
             <a href="#kontakt" class="btn btn--outline btn--sm boat-card__cta">Anfragen</a>
           </li>
 
-          <!-- Rutschentretboot (featured) -->
-          <li class="boat-card boat-card--featured reveal" aria-label="Rutschentretboot – beliebt">
+          <!-- Komfort-Tretboot -->
+          <li class="boat-card reveal" aria-label="Komfort-Tretboot">
+            <div class="boat-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 100 72" fill="none" xmlns="http://www.w3.org/2000/svg" width="90">
+                <path d="M12 46 Q50 62 88 46 L83 56 Q50 70 17 56 Z" fill="#1B4D6E" fill-opacity="0.12" stroke="#1B4D6E" stroke-width="2" stroke-linejoin="round"/>
+                <rect x="32" y="28" width="36" height="18" rx="5" fill="white" stroke="#1B4D6E" stroke-width="2"/>
+                <rect x="38" y="32" width="10" height="10" rx="2" fill="#EAF4FC"/>
+                <rect x="52" y="32" width="10" height="10" rx="2" fill="#EAF4FC"/>
+                <circle cx="50" cy="46" r="11" stroke="#2D9CDB" stroke-width="2.2" fill="none"/>
+                <line x1="50" y1="35" x2="50" y2="57" stroke="#2D9CDB" stroke-width="1.5"/>
+                <line x1="39" y1="46" x2="61" y2="46" stroke="#2D9CDB" stroke-width="1.5"/>
+                <ellipse cx="39" cy="46" rx="5" ry="2.5" fill="#2D9CDB" fill-opacity="0.7"/>
+                <ellipse cx="61" cy="46" rx="5" ry="2.5" fill="#2D9CDB" fill-opacity="0.7"/>
+              </svg>
+            </div>
+            <h3 class="boat-card__name">Komfort-Tretboot</h3>
+            <p class="boat-card__capacity">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              bis 4 Personen
+            </p>
+            <p class="boat-card__desc">Gemütlich übers Wasser gleiten — der Komfort-Klassiker für Familien und Ausflügler.</p>
+            <div class="boat-card__prices">
+              <div class="price-chip"><span>30 Min.</span><strong>9 €</strong></div>
+              <div class="price-chip"><span>60 Min.</span><strong>17 €</strong></div>
+            </div>
+            <a href="#kontakt" class="btn btn--outline btn--sm boat-card__cta">Anfragen</a>
+          </li>
+
+          <!-- Rutschenboot (featured) -->
+          <li class="boat-card boat-card--featured reveal" aria-label="Rutschenboot – beliebt">
             <span class="boat-card__badge">Beliebt</span>
             <div class="boat-card__icon" aria-hidden="true">
               <svg viewBox="0 0 100 72" fill="none" xmlns="http://www.w3.org/2000/svg" width="90">
@@ -199,21 +202,20 @@
                 <circle cx="74" cy="8" r="5" fill="#3A7D44" fill-opacity="0.5"/>
               </svg>
             </div>
-            <h3 class="boat-card__name">Rutschentretboot</h3>
+            <h3 class="boat-card__name">Rutschenboot</h3>
             <p class="boat-card__capacity">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              2–4 Personen
+              bis 4 Personen
             </p>
-            <p class="boat-card__desc">Mit integrierter Wasserrutsche — der Spaßfaktor schlechthin für die ganze Familie.</p>
+            <p class="boat-card__desc">Mit integrierter Wasserrutsche direkt in den See — der absolute Spaßgarant für Groß und Klein!</p>
             <div class="boat-card__prices">
-              <div class="price-chip"><span>30 Min.</span><strong>10 €</strong></div>
-              <div class="price-chip"><span>60 Min.</span><strong>18 €</strong></div>
+              <div class="price-chip price-chip--wide"><span>Preis</span><strong>auf Anfrage</strong></div>
             </div>
             <a href="#kontakt" class="btn btn--primary btn--sm boat-card__cta">Anfragen</a>
           </li>
 
           <!-- Stand-Up Paddle -->
-          <li class="boat-card reveal" aria-label="Stand-Up Paddle">
+          <li class="boat-card reveal" aria-label="Stand-Up Paddle Board">
             <div class="boat-card__icon" aria-hidden="true">
               <svg viewBox="0 0 100 72" fill="none" xmlns="http://www.w3.org/2000/svg" width="90">
                 <path d="M18 57 Q50 67 82 57 L79 63 Q50 71 21 63 Z" fill="#1B4D6E" fill-opacity="0.12" stroke="#1B4D6E" stroke-width="2" stroke-linejoin="round"/>
@@ -230,10 +232,9 @@
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/></svg>
               1 Person
             </p>
-            <p class="boat-card__desc">Balance, Stille, Natur — SUP-Boarding am Ebnisee für Einsteiger und Erfahrene.</p>
+            <p class="boat-card__desc">Balance, Natur, Stille — SUP-Boarding am Ebnisee. Ausweis erforderlich.</p>
             <div class="boat-card__prices">
-              <div class="price-chip"><span>30 Min.</span><strong>10 €</strong></div>
-              <div class="price-chip"><span>60 Min.</span><strong>18 €</strong></div>
+              <div class="price-chip price-chip--wide"><span>60 Min.</span><strong>15 €</strong></div>
             </div>
             <a href="#kontakt" class="btn btn--outline btn--sm boat-card__cta">Anfragen</a>
           </li>
@@ -243,53 +244,47 @@
         <!-- Preistabelle -->
         <div class="price-table-wrap reveal">
           <h3 class="price-table-heading">Preisübersicht</h3>
-          <div class="price-table-scroll" role="region" aria-label="Preistabelle Bootsverleih">
+          <div class="price-table-scroll" role="region" aria-label="Preistabelle Bootsvermietung">
             <table class="price-table">
-              <caption class="visually-hidden">Preise für alle Bootstypen in Euro</caption>
+              <caption class="visually-hidden">Preise für alle Bootstypen</caption>
               <thead>
                 <tr>
                   <th scope="col">Boot</th>
                   <th scope="col">Personen</th>
                   <th scope="col">30 Min.</th>
                   <th scope="col">60 Min.</th>
-                  <th scope="col">90 Min.</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">Tretboot</th>
-                  <td>2–4</td>
-                  <td>8 €</td>
-                  <td>14 €</td>
-                  <td>20 €</td>
+                  <th scope="row">Ruderboot</th>
+                  <td>bis 4</td>
+                  <td>6,00 €</td>
+                  <td>11,00 €</td>
                 </tr>
                 <tr>
-                  <th scope="row">Ruderboot</th>
-                  <td>2–4</td>
-                  <td>7 €</td>
-                  <td>12 €</td>
-                  <td>17 €</td>
+                  <th scope="row">Komfort-Tretboot</th>
+                  <td>bis 4</td>
+                  <td>9,00 €</td>
+                  <td>17,00 €</td>
                 </tr>
                 <tr class="price-table__featured">
-                  <th scope="row">Rutschentretboot</th>
-                  <td>2–4</td>
-                  <td>10 €</td>
-                  <td>18 €</td>
-                  <td>25 €</td>
+                  <th scope="row">Rutschenboot</th>
+                  <td>bis 4</td>
+                  <td colspan="2" style="text-align:center">auf Anfrage</td>
                 </tr>
                 <tr>
                   <th scope="row">Stand-Up Paddle</th>
                   <td>1</td>
-                  <td>10 €</td>
-                  <td>18 €</td>
-                  <td>25 €</td>
+                  <td>—</td>
+                  <td>15,00 €</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p class="price-note">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><line x1="12" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="16" x2="12" y2="16.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-            Alle Preise inkl. Schwimmwesten. Barzahlung vor Ort. Kaution: 20 € pro Boot.
+            Barzahlung vor Ort. Schwimmwesten inklusive. SUP: Ausweis erforderlich. Reservierung ab 5 Booten möglich.
           </p>
         </div>
 
@@ -297,14 +292,120 @@
     </section>
 
     <!-- ================================================
+         WALDSCHÄNKE / BIERGARTEN
+         ================================================ -->
+    <section id="biergarten" class="section section--white" aria-labelledby="biergarten-heading">
+      <div class="container">
+
+        <header class="section__header">
+          <h2 id="biergarten-heading" class="section__title reveal">Waldschänke &amp; Biergarten</h2>
+          <p class="section__sub reveal">280 Sitzplätze, Liegewiese mit direktem Seezugang und frische Küche — der perfekte Ort für einen unvergesslichen Tag am Ebnisee.</p>
+        </header>
+
+        <div class="biergarten-grid">
+
+          <!-- Angebots-Karten -->
+          <div class="biergarten-cards">
+
+            <div class="feature-card reveal">
+              <div class="feature-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M18 8h1a4 4 0 0 1 0 8h-1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" stroke="currentColor" stroke-width="2"/><line x1="6" y1="1" x2="6" y2="4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="10" y1="1" x2="10" y2="4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="14" y1="1" x2="14" y2="4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <h3 class="feature-card__title">Essen &amp; Trinken</h3>
+              <ul class="feature-card__list">
+                <li>Weißwurstfrühstück</li>
+                <li>Weizenbier vom Fass</li>
+                <li>Grill &amp; Holzsteinofen</li>
+                <li>Frische Kuchen &amp; Kaffeespezialitäten</li>
+              </ul>
+            </div>
+
+            <div class="feature-card reveal">
+              <div class="feature-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M8 12s1.5 2 4 2 4-2 4-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="9" y1="9" x2="9.01" y2="9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="15" y1="9" x2="15.01" y2="9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+              </div>
+              <h3 class="feature-card__title">Liegewiese &amp; See</h3>
+              <ul class="feature-card__list">
+                <li>Große Liegewiese direkt am See</li>
+                <li>Direkter Zugang zum Wasser</li>
+                <li>Ideal für Familien mit Kindern</li>
+                <li>Seichtes Gewässer zum Baden</li>
+              </ul>
+            </div>
+
+            <div class="feature-card reveal">
+              <div class="feature-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <h3 class="feature-card__title">Events &amp; Gruppen</h3>
+              <ul class="feature-card__list">
+                <li>Firmenfeiern &amp; Geburtstage</li>
+                <li>Hochzeiten bis 250 Personen</li>
+                <li>Gruppenreservierung ab 8 Personen</li>
+                <li>Individuelle Angebote auf Anfrage</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Große Infokarte -->
+          <div class="biergarten-info reveal">
+            <div class="biergarten-highlight">
+              <div class="biergarten-highlight__stat">
+                <span class="biergarten-highlight__num">280</span>
+                <span class="biergarten-highlight__label">Sitzplätze</span>
+              </div>
+              <div class="biergarten-highlight__divider" aria-hidden="true"></div>
+              <div class="biergarten-highlight__stat">
+                <span class="biergarten-highlight__num">250</span>
+                <span class="biergarten-highlight__label">Pers. für Events</span>
+              </div>
+            </div>
+            <blockquote class="biergarten-quote">
+              <p>„Die Waldschänke bietet Biertische, Einzeltische mit Stühlen und ein Zelt — für jeden Anlass die passende Atmosphäre direkt am See."</p>
+            </blockquote>
+            <a href="#kontakt" class="btn btn--primary">Tisch oder Event anfragen</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         FAMILIE RADER / ÜBER UNS
+         ================================================ -->
+    <section id="familie" class="section section--green" aria-labelledby="familie-heading">
+      <div class="container">
+        <div class="familie-grid">
+          <div class="familie-text reveal">
+            <p class="familie-since">Seit 1963</p>
+            <h2 id="familie-heading" class="section__title" style="color:#fff; text-align:left; margin-bottom:1rem;">Aus Liebe und Tradition am Ebnisee</h2>
+            <p class="familie-desc">Der familienfreundliche Biergarten und die einladende Bootsvermietung sind seit vier Generationen in Familienbesitz. Der Ebnisee, auch bekannt als die Perle des Schwäbischen Waldes, liegt in einer idyllischen Oase zwischen Stuttgart, Ludwigsburg, Heilbronn und Crailsheim.</p>
+            <p class="familie-desc">Unser Ziel ist es, unsere Besucher aus dem stressigen Alltag zu entziehen und eine Oase zu schaffen, in der man sich erholen und die Seele baumeln lassen kann.</p>
+            <p class="familie-names">Monika, Daniel, Markus &amp; Benjamin Rader</p>
+          </div>
+          <div class="familie-lake reveal">
+            <div class="lake-card">
+              <div class="lake-card__icon" aria-hidden="true">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="1.5"/><polyline points="9 22 9 12 15 12 15 22" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <h3>Die Perle des Schwäbischen Waldes</h3>
+              <p>Der Ebnisee entstand 1745 als Stausee und ist heute eines der beliebtesten Naherholungsgebiete der Region — umgeben von Wald, Natur und Stille.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
          ANFAHRT & ÖFFNUNGSZEITEN
          ================================================ -->
-    <section id="anfahrt" class="section section--white" aria-labelledby="anfahrt-heading">
+    <section id="anfahrt" class="section section--sand" aria-labelledby="anfahrt-heading">
       <div class="container">
 
         <header class="section__header">
           <h2 id="anfahrt-heading" class="section__title reveal">Anfahrt &amp; Öffnungszeiten</h2>
-          <p class="section__sub reveal">Wir freuen uns auf Ihren Besuch direkt am Ebnisee.</p>
+          <p class="section__sub reveal">Wir freuen uns auf Ihren Besuch am Ebnisee.</p>
         </header>
 
         <div class="anfahrt-grid">
@@ -313,37 +414,38 @@
 
             <div class="info-block reveal">
               <h3 class="info-block__title">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="12 6 12 12 16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="12 6 12 12 16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                 Öffnungszeiten
               </h3>
-              <p class="info-block__season">Saison: <strong>Mai – September</strong></p>
+              <p class="info-block__season">Saison: <strong>Frühjahr – Herbst</strong></p>
+              <p class="info-block__note" style="margin-top:0; margin-bottom:0.75rem; font-style:normal; color: var(--color-text-light);">Täglich bei schönem Wetter geöffnet.</p>
               <table class="hours-table" aria-label="Öffnungszeiten">
                 <tbody>
                   <tr>
-                    <th scope="row">Mo – Fr</th>
-                    <td>10:00 – 18:00 Uhr</td>
+                    <th scope="row">Bootsvermietung</th>
+                    <td>Südliches Ufer</td>
                   </tr>
                   <tr>
-                    <th scope="row">Sa, So &amp; Feiertage</th>
-                    <td>09:00 – 19:00 Uhr</td>
+                    <th scope="row">Biergarten</th>
+                    <td>Ca. 600 m um den See</td>
                   </tr>
                 </tbody>
               </table>
-              <p class="info-block__note">Bei Sturm oder starkem Regen bleibt der Verleih geschlossen.</p>
+              <p class="info-block__note">Aktuelle Öffnungszeiten immer bei Google Maps abrufbar.</p>
             </div>
 
             <div class="info-block reveal">
               <h3 class="info-block__title">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg>
-                Adresse
+                Adresse &amp; Parkplatz
               </h3>
               <address class="info-block__address">
-                Tretbootverleih Ebnisee<br>
-                Ebnisee<br>
+                Rader's Waldschänke &amp; Bootsvermietung<br>
+                Klösterle 100<br>
                 73667 Kaisersbach<br>
                 Baden-Württemberg
               </address>
-              <p class="info-block__hint">Zufahrt über die L 1150 aus Richtung Welzheim oder Kaisersbach. Parkplätze am See vorhanden.</p>
+              <p class="info-block__hint">Parkplätze auf der Südseite des Ebnisees — direkt an der Bootsvermietung. Zu Fuß ca. 600 m zum Biergarten. Teilweise kostenpflichtig.</p>
               <a href="https://www.openstreetmap.org/?mlat=48.8847&amp;mlon=9.6356#map=15/48.8847/9.6356"
                  class="btn btn--outline btn--sm"
                  target="_blank"
@@ -373,14 +475,14 @@
     </section>
 
     <!-- ================================================
-         KONTAKT / BUCHUNGSANFRAGE
+         KONTAKT
          ================================================ -->
     <section id="kontakt" class="section section--blue" aria-labelledby="kontakt-heading">
       <div class="container">
 
         <header class="section__header section__header--light">
-          <h2 id="kontakt-heading" class="section__title reveal">Buchungsanfrage &amp; Kontakt</h2>
-          <p class="section__sub reveal">Fragen, Reservierungswunsch oder einfach Hallo — wir freuen uns auf Ihre Nachricht.</p>
+          <h2 id="kontakt-heading" class="section__title reveal">Kontakt &amp; Anfrage</h2>
+          <p class="section__sub reveal">Fragen zur Bootsvermietung, Reservierungen für den Biergarten oder Events — wir freuen uns auf Ihre Nachricht.</p>
         </header>
 
         <div class="kontakt-grid">
@@ -388,20 +490,20 @@
           <div class="kontakt-sidebar reveal">
             <div class="contact-item">
               <span class="contact-item__icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.45 2 2 0 0 1 3.61 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2"/></svg>
-              </span>
-              <div>
-                <p class="contact-item__label">Telefon</p>
-                <a href="tel:+497184000000" class="contact-item__value">+49 7184 000 000</a>
-              </div>
-            </div>
-            <div class="contact-item">
-              <span class="contact-item__icon" aria-hidden="true">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg>
               </span>
               <div>
                 <p class="contact-item__label">E-Mail</p>
-                <a href="mailto:info@ebnisee-verleih.de" class="contact-item__value">info@ebnisee-verleih.de</a>
+                <a href="mailto:info@biergarten-ebnisee.de" class="contact-item__value">info@biergarten-ebnisee.de</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-item__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg>
+              </span>
+              <div>
+                <p class="contact-item__label">Adresse</p>
+                <p class="contact-item__value">Klösterle 100<br>73667 Kaisersbach</p>
               </div>
             </div>
             <div class="contact-item">
@@ -409,13 +511,13 @@
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="12 6 12 12 16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
               </span>
               <div>
-                <p class="contact-item__label">Saison-Zeiten</p>
-                <p class="contact-item__value">Mo–Fr 10–18 Uhr<br>Sa–So 9–19 Uhr</p>
+                <p class="contact-item__label">Saison</p>
+                <p class="contact-item__value">Frühjahr – Herbst<br>täglich bei schönem Wetter</p>
               </div>
             </div>
           </div>
 
-          <form id="contact-form" class="contact-form reveal" novalidate aria-label="Buchungsanfrage">
+          <form id="contact-form" class="contact-form reveal" novalidate aria-label="Anfrage-Formular">
 
             <div class="form-row">
               <div class="form-group">
@@ -432,42 +534,43 @@
 
             <div class="form-row">
               <div class="form-group">
-                <label for="f-phone" class="form-label">Telefon</label>
-                <input type="tel" id="f-phone" name="phone" class="form-input" autocomplete="tel" placeholder="+49 ...">
-              </div>
-              <div class="form-group">
                 <label for="f-date" class="form-label">Wunschdatum <span aria-hidden="true" class="req">*</span></label>
                 <input type="date" id="f-date" name="date" class="form-input" required aria-required="true" aria-describedby="f-date-error">
                 <span id="f-date-error" class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="f-boat" class="form-label">Anfrage für</label>
+                <select id="f-boat" name="boat" class="form-input form-select">
+                  <option value="" disabled selected>Bitte wählen …</option>
+                  <option value="ruderboot">Ruderboot</option>
+                  <option value="tretboot">Komfort-Tretboot</option>
+                  <option value="rutsche">Rutschenboot</option>
+                  <option value="sup">Stand-Up Paddle</option>
+                  <option value="biergarten">Biergarten-Tisch</option>
+                  <option value="event">Event / Feier</option>
+                  <option value="mehrere">Mehrere Boote</option>
+                </select>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label for="f-boat" class="form-label">Bootstyp <span aria-hidden="true" class="req">*</span></label>
-                <select id="f-boat" name="boat" class="form-input form-select" required aria-required="true" aria-describedby="f-boat-error">
-                  <option value="" disabled selected>Bitte wählen …</option>
-                  <option value="tretboot">Tretboot (2–4 Pers.)</option>
-                  <option value="ruderboot">Ruderboot (2–4 Pers.)</option>
-                  <option value="rutsche">Rutschentretboot (2–4 Pers.)</option>
-                  <option value="sup">Stand-Up Paddle (1 Pers.)</option>
-                </select>
-                <span id="f-boat-error" class="form-error" role="alert" aria-live="polite"></span>
+                <label for="f-persons" class="form-label">Personen <span aria-hidden="true" class="req">*</span></label>
+                <input type="number" id="f-persons" name="persons" class="form-input" min="1" max="250" required aria-required="true" aria-describedby="f-persons-error" placeholder="Anzahl">
+                <span id="f-persons-error" class="form-error" role="alert" aria-live="polite"></span>
               </div>
               <div class="form-group">
-                <label for="f-persons" class="form-label">Personen <span aria-hidden="true" class="req">*</span></label>
-                <input type="number" id="f-persons" name="persons" class="form-input" min="1" max="8" required aria-required="true" aria-describedby="f-persons-error" placeholder="z. B. 3">
-                <span id="f-persons-error" class="form-error" role="alert" aria-live="polite"></span>
+                <label for="f-phone" class="form-label">Telefon</label>
+                <input type="tel" id="f-phone" name="phone" class="form-input" autocomplete="tel" placeholder="+49 ...">
               </div>
             </div>
 
             <div class="form-group">
               <label for="f-message" class="form-label">Nachricht</label>
-              <textarea id="f-message" name="message" class="form-input form-textarea" rows="4" placeholder="Fragen, Sonderwünsche, bevorzugte Uhrzeit …" aria-describedby="f-message-hint"></textarea>
+              <textarea id="f-message" name="message" class="form-input form-textarea" rows="4" placeholder="Ihre Wünsche, Fragen oder Details zur Anfrage …" aria-describedby="f-message-hint"></textarea>
               <span id="f-message-hint" class="form-hint">Optional</span>
             </div>
 
-            <!-- Honeypot (spam prevention) -->
             <div class="visually-hidden" aria-hidden="true">
               <label for="f-website">Website (nicht ausfüllen)</label>
               <input type="text" id="f-website" name="website" tabindex="-1" autocomplete="off">
@@ -478,7 +581,7 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polygon points="22 2 15 22 11 13 2 9 22 2" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="currentColor" fill-opacity="0.15"/></svg>
                 <span class="btn__text">Anfrage absenden</span>
               </button>
-              <p class="form-privacy">Mit dem Absenden stimmen Sie unserer Datenschutzerklärung zu. Pflichtfelder sind mit <span aria-hidden="true" class="req">*</span> markiert.</p>
+              <p class="form-privacy">Mit dem Absenden stimmen Sie unserer Datenschutzerklärung zu. Pflichtfelder: <span aria-hidden="true" class="req">*</span></p>
             </div>
 
             <div id="form-result" class="form-result" role="alert" aria-live="assertive" hidden></div>
@@ -497,20 +600,22 @@
   <footer class="site-footer" role="contentinfo">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <p class="footer__name">Ebnisee <strong>Verleih</strong></p>
-        <p class="footer__tagline">Am See. Im Grünen. Auf dem Wasser.</p>
+        <img src="assets/images/logo.png" alt="Rader's Waldschänke & Bootsvermietung" class="footer__logo-img" onerror="this.style.display='none'">
+        <p class="footer__tagline">Biergarten &amp; Bootsvermietung am Ebnisee.<br>Seit 1963 in Familienbesitz.</p>
         <address class="footer__address">
-          Ebnisee · 73667 Kaisersbach<br>
-          <a href="tel:+497184000000">+49 7184 000 000</a>
+          Klösterle 100 · 73667 Kaisersbach<br>
+          <a href="mailto:info@biergarten-ebnisee.de">info@biergarten-ebnisee.de</a>
         </address>
       </div>
       <nav class="footer__nav" aria-label="Footer-Navigation">
-        <a href="#boote-preise">Boote &amp; Preise</a>
+        <a href="#bootsvermietung">Bootsvermietung</a>
+        <a href="#biergarten">Biergarten</a>
         <a href="#anfahrt">Anfahrt</a>
         <a href="#kontakt">Kontakt</a>
+        <a href="mailto:bewerbung@biergarten-ebnisee.de">Jobs / Karriere</a>
       </nav>
       <p class="footer__legal">
-        © <span id="footer-year"></span> Tretbootverleih Ebnisee ·
+        © <span id="footer-year"></span> Rader's Waldschänke &amp; Bootsvermietung ·
         <a href="#">Impressum</a> · <a href="#">Datenschutz</a>
       </p>
     </div>

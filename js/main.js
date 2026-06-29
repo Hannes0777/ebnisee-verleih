@@ -179,9 +179,9 @@
     'f-persons': {
       test: v => {
         const n = parseInt(v, 10);
-        return !isNaN(n) && n >= 1 && n <= 8;
+        return !isNaN(n) && n >= 1 && n <= 250;
       },
-      msg: 'Bitte Anzahl der Personen angeben (1–8).'
+      msg: 'Bitte Anzahl der Personen angeben (1–250).'
     }
   };
 
