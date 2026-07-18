@@ -160,7 +160,8 @@
         <ul class="boats-grid" role="list">
 
           <!-- Ruderboot -->
-          <li class="boat-card reveal" aria-label="Ruderboot">
+          <li class="boat-card reveal" data-boat-id="ruderboot" aria-label="Ruderboot">
+            <span class="boat-card__badge" hidden>Beliebt</span>
             <div class="boat-card__icon" aria-hidden="true">
               <svg viewBox="0 0 100 72" fill="none" xmlns="http://www.w3.org/2000/svg" width="90">
                 <path d="M8 44 Q50 60 92 44 L87 54 Q50 68 13 54 Z" fill="#1B4D6E" fill-opacity="0.12" stroke="#1B4D6E" stroke-width="2" stroke-linejoin="round"/>
@@ -186,7 +187,8 @@
           </li>
 
           <!-- Komfort-Tretboot -->
-          <li class="boat-card reveal" aria-label="Komfort-Tretboot">
+          <li class="boat-card reveal" data-boat-id="tretboot" aria-label="Komfort-Tretboot">
+            <span class="boat-card__badge" hidden>Beliebt</span>
             <div class="boat-card__icon" aria-hidden="true">
               <svg viewBox="0 0 100 72" fill="none" xmlns="http://www.w3.org/2000/svg" width="90">
                 <path d="M12 46 Q50 62 88 46 L83 56 Q50 70 17 56 Z" fill="#1B4D6E" fill-opacity="0.12" stroke="#1B4D6E" stroke-width="2" stroke-linejoin="round"/>
@@ -214,7 +216,7 @@
           </li>
 
           <!-- Rutschenboot (featured) -->
-          <li class="boat-card boat-card--featured reveal" aria-label="Rutschenboot – beliebt">
+          <li class="boat-card boat-card--featured reveal" data-boat-id="rutsche" aria-label="Rutschenboot – beliebt">
             <span class="boat-card__badge">Beliebt</span>
             <div class="boat-card__icon" aria-hidden="true">
               <svg viewBox="0 0 100 72" fill="none" xmlns="http://www.w3.org/2000/svg" width="90">
@@ -243,7 +245,8 @@
           </li>
 
           <!-- Stand-Up Paddle -->
-          <li class="boat-card reveal" aria-label="Stand-Up Paddle Board">
+          <li class="boat-card reveal" data-boat-id="sup" aria-label="Stand-Up Paddle Board">
+            <span class="boat-card__badge" hidden>Beliebt</span>
             <div class="boat-card__icon" aria-hidden="true">
               <svg viewBox="0 0 100 72" fill="none" xmlns="http://www.w3.org/2000/svg" width="90">
                 <path d="M18 57 Q50 67 82 57 L79 63 Q50 71 21 63 Z" fill="#1B4D6E" fill-opacity="0.12" stroke="#1B4D6E" stroke-width="2" stroke-linejoin="round"/>
@@ -284,24 +287,24 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr data-boat-id="ruderboot">
                   <th scope="row">Ruderboot</th>
                   <td>bis 4</td>
                   <td>6,00 €</td>
                   <td>11,00 €</td>
                 </tr>
-                <tr>
+                <tr data-boat-id="tretboot">
                   <th scope="row">Komfort-Tretboot</th>
                   <td>bis 4</td>
                   <td>9,00 €</td>
                   <td>17,00 €</td>
                 </tr>
-                <tr class="price-table__featured">
+                <tr class="price-table__featured" data-boat-id="rutsche">
                   <th scope="row">Rutschenboot</th>
                   <td>bis 4</td>
                   <td colspan="2" style="text-align:center">auf Anfrage</td>
                 </tr>
-                <tr>
+                <tr data-boat-id="sup">
                   <th scope="row">Stand-Up Paddle</th>
                   <td>1</td>
                   <td>—</td>
@@ -346,7 +349,7 @@
           <!-- Angebots-Karten -->
           <div class="biergarten-cards">
 
-            <div class="feature-card reveal">
+            <div class="feature-card reveal" data-feature-id="essen">
               <div class="feature-card__icon" aria-hidden="true">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M18 8h1a4 4 0 0 1 0 8h-1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" stroke="currentColor" stroke-width="2"/><line x1="6" y1="1" x2="6" y2="4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="10" y1="1" x2="10" y2="4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="14" y1="1" x2="14" y2="4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
               </div>
@@ -359,7 +362,7 @@
               </ul>
             </div>
 
-            <div class="feature-card reveal">
+            <div class="feature-card reveal" data-feature-id="liegewiese">
               <div class="feature-card__icon" aria-hidden="true">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M8 12s1.5 2 4 2 4-2 4-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="9" y1="9" x2="9.01" y2="9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="15" y1="9" x2="15.01" y2="9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
               </div>
@@ -372,7 +375,7 @@
               </ul>
             </div>
 
-            <div class="feature-card reveal">
+            <div class="feature-card reveal" data-feature-id="events">
               <div class="feature-card__icon" aria-hidden="true">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
               </div>
@@ -461,14 +464,14 @@
                 Öffnungszeiten
               </h3>
               <p class="info-block__season">Saison: <strong>Frühjahr – Herbst</strong></p>
-              <p class="info-block__note" style="margin-top:0; margin-bottom:0.75rem; font-style:normal; color: var(--color-text-light);">Täglich bei schönem Wetter geöffnet.</p>
+              <p id="anfahrt-season-note" class="info-block__note" style="margin-top:0; margin-bottom:0.75rem; font-style:normal; color: var(--color-text-light);">Täglich bei schönem Wetter geöffnet.</p>
               <table class="hours-table" aria-label="Öffnungszeiten">
                 <tbody>
-                  <tr>
+                  <tr data-row="bootsvermietung">
                     <th scope="row">Bootsvermietung</th>
                     <td>Südliches Ufer</td>
                   </tr>
-                  <tr>
+                  <tr data-row="biergarten">
                     <th scope="row">Biergarten</th>
                     <td>Ca. 600 m um den See</td>
                   </tr>
@@ -537,7 +540,7 @@
               </span>
               <div>
                 <p class="contact-item__label">E-Mail</p>
-                <a href="mailto:info@biergarten-ebnisee.de" class="contact-item__value">info@biergarten-ebnisee.de</a>
+                <a href="mailto:info@biergarten-ebnisee.de" id="contact-email-link" class="contact-item__value">info@biergarten-ebnisee.de</a>
               </div>
             </div>
             <div class="contact-item">
@@ -546,7 +549,7 @@
               </span>
               <div>
                 <p class="contact-item__label">Adresse</p>
-                <p class="contact-item__value">Klösterle 100<br>73667 Kaisersbach</p>
+                <p id="contact-address-value" class="contact-item__value">Klösterle 100<br>73667 Kaisersbach</p>
               </div>
             </div>
             <div class="contact-item">
@@ -555,7 +558,7 @@
               </span>
               <div>
                 <p class="contact-item__label">Saison</p>
-                <p class="contact-item__value">Frühjahr – Herbst<br>täglich bei schönem Wetter</p>
+                <p id="contact-season-value" class="contact-item__value">Frühjahr – Herbst<br>täglich bei schönem Wetter</p>
               </div>
             </div>
           </div>
@@ -646,8 +649,8 @@
         <img src="assets/images/logo.png" alt="Rader's Waldschänke & Bootsvermietung" class="footer__logo-img" onerror="this.style.display='none'">
         <p class="footer__tagline">Biergarten &amp; Bootsvermietung am Ebnisee.<br>Seit 1963 in Familienbesitz.</p>
         <address class="footer__address">
-          Klösterle 100 · 73667 Kaisersbach<br>
-          <a href="mailto:info@biergarten-ebnisee.de">info@biergarten-ebnisee.de</a>
+          <span id="footer-address-text">Klösterle 100 · 73667 Kaisersbach</span><br>
+          <a href="mailto:info@biergarten-ebnisee.de" id="footer-email-link">info@biergarten-ebnisee.de</a>
         </address>
       </div>
       <nav class="footer__nav" aria-label="Footer-Navigation">
@@ -664,6 +667,7 @@
     </div>
   </footer>
 
+  <script src="js/cms-content.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

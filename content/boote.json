@@ -1,0 +1,38 @@
+{
+  "ruderboot": {
+    "name": "Ruderboot",
+    "kapazitaet": "bis 4 Personen",
+    "beschreibung": "Romantisch und ursprünglich — das klassische Rudererlebnis auf dem glasklaren Ebnisee.",
+    "preis30": 6,
+    "preis60": 11,
+    "aufAnfrage": false,
+    "featured": false
+  },
+  "tretboot": {
+    "name": "Komfort-Tretboot",
+    "kapazitaet": "bis 4 Personen",
+    "beschreibung": "Gemütlich übers Wasser gleiten — der Komfort-Klassiker für Familien und Ausflügler.",
+    "preis30": 9,
+    "preis60": 17,
+    "aufAnfrage": false,
+    "featured": false
+  },
+  "rutsche": {
+    "name": "Rutschenboot",
+    "kapazitaet": "bis 4 Personen",
+    "beschreibung": "Mit integrierter Wasserrutsche direkt in den See — der absolute Spaßgarant für Groß und Klein!",
+    "preis30": null,
+    "preis60": null,
+    "aufAnfrage": true,
+    "featured": true
+  },
+  "sup": {
+    "name": "Stand-Up Paddle",
+    "kapazitaet": "1 Person",
+    "beschreibung": "Balance, Natur, Stille — SUP-Boarding am Ebnisee. Ausweis erforderlich.",
+    "preis30": null,
+    "preis60": 15,
+    "aufAnfrage": false,
+    "featured": false
+  }
+}

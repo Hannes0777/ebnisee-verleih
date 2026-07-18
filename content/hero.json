@@ -1,0 +1,26 @@
+{
+  "eyebrow": "Klösterle 100  ·  73667 Kaisersbach  ·  Seit 1963",
+  "headline_line1": "Waldschänke &",
+  "headline_line2": "Bootsvermietung.",
+  "sub": "Biergarten mit 280 Sitzplätzen, Liegewiese und Seeblick — dazu Tretboote, Ruderboote, Rutschenboote und Stand-Up Paddle direkt am Ebnisee. Seit vier Generationen in Familienbesitz.",
+  "badges": {
+    "badge_1": "Weißwurstfrühstück",
+    "badge_2": "Weizenbier vom Fass",
+    "badge_3": "280 Sitzplätze",
+    "badge_4": "Seit 1963"
+  },
+  "stats": {
+    "stat_1": {
+      "num": "4",
+      "label": "Bootstypen"
+    },
+    "stat_2": {
+      "num": "280",
+      "label": "Sitzplätze"
+    },
+    "stat_3": {
+      "num": "1963",
+      "label": "Familienbesitz"
+    }
+  }
+}

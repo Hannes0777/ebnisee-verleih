@@ -1,0 +1,388 @@
+# ============================================================
+#  Sveltia CMS – Konfiguration für Rader's Waldschänke & Bootsvermietung
+#  Bearbeitet werden JSON-Dateien im Ordner /content/
+# ============================================================
+
+backend:
+  name: github
+  repo: Hannes0777/ebnisee-verleih
+  branch: master
+  # Eigener Cloudflare-Worker nur für diese Website: E-Mail/Passwort-Login,
+  # kein GitHub-Account nötig, kein Zugriff auf andere Websites möglich.
+  base_url: https://cms-auth-ebnisee.ehmann-hannes07.workers.dev
+
+media_folder: uploads
+public_folder: /uploads
+
+locale: de
+
+# ============================================================
+#  SAMMLUNGEN
+# ============================================================
+
+collections:
+
+  # ----------------------------------------------------------
+  #  BOOTSVERMIETUNG & PREISE (wichtigster Bereich)
+  # ----------------------------------------------------------
+  - name: boote
+    label: "🚣 Bootsvermietung & Preise"
+    description: "Wichtig: Hier pflegen Sie alle 4 Boote und deren Preise nur EIN EINZIGES MAL. Die Änderungen erscheinen automatisch sowohl in den Boots-Karten weiter oben auf der Seite als auch in der Preistabelle darunter – Sie müssen also nichts doppelt eintragen."
+    files:
+      - name: boote
+        label: "Boote & Preise verwalten"
+        file: content/boote.json
+        fields:
+
+          - name: ruderboot
+            label: "🚣 Ruderboot"
+            widget: object
+            fields:
+              - name: name
+                label: "Name des Bootes"
+                widget: string
+              - name: kapazitaet
+                label: "Personenzahl"
+                widget: string
+                hint: "Erscheint auf der Karte, z.B. 'bis 4 Personen'. In der Preistabelle wird automatisch nur die Zahl angezeigt."
+              - name: beschreibung
+                label: "Beschreibungstext"
+                widget: text
+                hint: "Kurzer Werbetext auf der Boots-Karte"
+              - name: preis30
+                label: "Preis für 30 Minuten (in Euro)"
+                widget: number
+                value_type: float
+                required: false
+                hint: "Nur die Zahl eingeben, z.B. 6 – Leer lassen, falls es diese Option für dieses Boot nicht gibt"
+              - name: preis60
+                label: "Preis für 60 Minuten (in Euro)"
+                widget: number
+                value_type: float
+                required: false
+                hint: "Nur die Zahl eingeben, z.B. 11 – Leer lassen, falls es diese Option für dieses Boot nicht gibt"
+              - name: aufAnfrage
+                label: "Preis nur 'auf Anfrage'?"
+                widget: boolean
+                default: false
+                hint: "Aktivieren, wenn es für dieses Boot keinen festen Preis gibt – es wird dann überall 'auf Anfrage' statt der Preise angezeigt."
+              - name: featured
+                label: "Als 'Beliebt' hervorheben?"
+                widget: boolean
+                default: false
+                hint: "Zeigt die Auszeichnung 'Beliebt' auf der Karte. Bitte nur bei einem Boot gleichzeitig aktivieren."
+
+          - name: tretboot
+            label: "🚣 Komfort-Tretboot"
+            widget: object
+            fields:
+              - name: name
+                label: "Name des Bootes"
+                widget: string
+              - name: kapazitaet
+                label: "Personenzahl"
+                widget: string
+                hint: "Erscheint auf der Karte, z.B. 'bis 4 Personen'. In der Preistabelle wird automatisch nur die Zahl angezeigt."
+              - name: beschreibung
+                label: "Beschreibungstext"
+                widget: text
+                hint: "Kurzer Werbetext auf der Boots-Karte"
+              - name: preis30
+                label: "Preis für 30 Minuten (in Euro)"
+                widget: number
+                value_type: float
+                required: false
+                hint: "Nur die Zahl eingeben, z.B. 9 – Leer lassen, falls es diese Option für dieses Boot nicht gibt"
+              - name: preis60
+                label: "Preis für 60 Minuten (in Euro)"
+                widget: number
+                value_type: float
+                required: false
+                hint: "Nur die Zahl eingeben, z.B. 17 – Leer lassen, falls es diese Option für dieses Boot nicht gibt"
+              - name: aufAnfrage
+                label: "Preis nur 'auf Anfrage'?"
+                widget: boolean
+                default: false
+                hint: "Aktivieren, wenn es für dieses Boot keinen festen Preis gibt – es wird dann überall 'auf Anfrage' statt der Preise angezeigt."
+              - name: featured
+                label: "Als 'Beliebt' hervorheben?"
+                widget: boolean
+                default: false
+                hint: "Zeigt die Auszeichnung 'Beliebt' auf der Karte. Bitte nur bei einem Boot gleichzeitig aktivieren."
+
+          - name: rutsche
+            label: "🚣 Rutschenboot"
+            widget: object
+            fields:
+              - name: name
+                label: "Name des Bootes"
+                widget: string
+              - name: kapazitaet
+                label: "Personenzahl"
+                widget: string
+                hint: "Erscheint auf der Karte, z.B. 'bis 4 Personen'. In der Preistabelle wird automatisch nur die Zahl angezeigt."
+              - name: beschreibung
+                label: "Beschreibungstext"
+                widget: text
+                hint: "Kurzer Werbetext auf der Boots-Karte"
+              - name: preis30
+                label: "Preis für 30 Minuten (in Euro)"
+                widget: number
+                value_type: float
+                required: false
+                hint: "Nur die Zahl eingeben – Leer lassen, falls es diese Option für dieses Boot nicht gibt (z.B. wenn 'auf Anfrage' aktiv ist)"
+              - name: preis60
+                label: "Preis für 60 Minuten (in Euro)"
+                widget: number
+                value_type: float
+                required: false
+                hint: "Nur die Zahl eingeben – Leer lassen, falls es diese Option für dieses Boot nicht gibt (z.B. wenn 'auf Anfrage' aktiv ist)"
+              - name: aufAnfrage
+                label: "Preis nur 'auf Anfrage'?"
+                widget: boolean
+                default: true
+                hint: "Aktivieren, wenn es für dieses Boot keinen festen Preis gibt – es wird dann überall 'auf Anfrage' statt der Preise angezeigt."
+              - name: featured
+                label: "Als 'Beliebt' hervorheben?"
+                widget: boolean
+                default: true
+                hint: "Zeigt die Auszeichnung 'Beliebt' auf der Karte. Bitte nur bei einem Boot gleichzeitig aktivieren."
+
+          - name: sup
+            label: "🏄 Stand-Up Paddle"
+            widget: object
+            fields:
+              - name: name
+                label: "Name"
+                widget: string
+              - name: kapazitaet
+                label: "Personenzahl"
+                widget: string
+                hint: "Erscheint auf der Karte, z.B. '1 Person'. In der Preistabelle wird automatisch nur die Zahl angezeigt."
+              - name: beschreibung
+                label: "Beschreibungstext"
+                widget: text
+                hint: "Kurzer Werbetext auf der Karte"
+              - name: preis30
+                label: "Preis für 30 Minuten (in Euro)"
+                widget: number
+                value_type: float
+                required: false
+                hint: "Nur die Zahl eingeben – Leer lassen, falls es diese Option nicht gibt"
+              - name: preis60
+                label: "Preis für 60 Minuten (in Euro)"
+                widget: number
+                value_type: float
+                required: false
+                hint: "Nur die Zahl eingeben, z.B. 15 – Leer lassen, falls es diese Option nicht gibt"
+              - name: aufAnfrage
+                label: "Preis nur 'auf Anfrage'?"
+                widget: boolean
+                default: false
+                hint: "Aktivieren, wenn es keinen festen Preis gibt – es wird dann überall 'auf Anfrage' statt der Preise angezeigt."
+              - name: featured
+                label: "Als 'Beliebt' hervorheben?"
+                widget: boolean
+                default: false
+                hint: "Zeigt die Auszeichnung 'Beliebt' auf der Karte. Bitte nur bei einem Boot gleichzeitig aktivieren."
+
+  # ----------------------------------------------------------
+  #  BIERGARTEN
+  # ----------------------------------------------------------
+  - name: biergarten
+    label: "🍺 Biergarten"
+    description: "Die drei Angebots-Karten, die Kennzahlen und das Zitat im Biergarten-Bereich."
+    files:
+      - name: biergarten
+        label: "Biergarten-Inhalte verwalten"
+        file: content/biergarten.json
+        fields:
+          - name: cards
+            label: "Angebots-Karten"
+            widget: object
+            fields:
+              - name: essen
+                label: "🍽 Karte: Essen & Trinken"
+                widget: object
+                fields:
+                  - { name: title, label: "Überschrift", widget: string }
+                  - { name: item_1, label: "Stichpunkt 1", widget: string }
+                  - { name: item_2, label: "Stichpunkt 2", widget: string }
+                  - { name: item_3, label: "Stichpunkt 3", widget: string }
+                  - { name: item_4, label: "Stichpunkt 4", widget: string }
+              - name: liegewiese
+                label: "🌳 Karte: Liegewiese & See"
+                widget: object
+                fields:
+                  - { name: title, label: "Überschrift", widget: string }
+                  - { name: item_1, label: "Stichpunkt 1", widget: string }
+                  - { name: item_2, label: "Stichpunkt 2", widget: string }
+                  - { name: item_3, label: "Stichpunkt 3", widget: string }
+                  - { name: item_4, label: "Stichpunkt 4", widget: string }
+              - name: events
+                label: "🎉 Karte: Events & Gruppen"
+                widget: object
+                fields:
+                  - { name: title, label: "Überschrift", widget: string }
+                  - { name: item_1, label: "Stichpunkt 1", widget: string }
+                  - { name: item_2, label: "Stichpunkt 2", widget: string }
+                  - { name: item_3, label: "Stichpunkt 3", widget: string }
+                  - { name: item_4, label: "Stichpunkt 4", widget: string }
+          - name: stats
+            label: "Kennzahlen (goldene Box)"
+            widget: object
+            fields:
+              - name: stat_1
+                label: "Erste Kennzahl"
+                widget: object
+                fields:
+                  - { name: num, label: "Zahl (z.B. 280)", widget: string }
+                  - { name: label, label: "Beschriftung (z.B. Sitzplätze)", widget: string }
+              - name: stat_2
+                label: "Zweite Kennzahl"
+                widget: object
+                fields:
+                  - { name: num, label: "Zahl (z.B. 250)", widget: string }
+                  - { name: label, label: "Beschriftung (z.B. Pers. für Events)", widget: string }
+          - name: zitat
+            label: "Zitat"
+            widget: text
+            hint: "Wird in Anführungszeichen dargestellt – diese bitte nicht selbst mit eingeben."
+
+  # ----------------------------------------------------------
+  #  FAMILIE RADER
+  # ----------------------------------------------------------
+  - name: familie
+    label: "👨‍👩‍👧‍👦 Familie Rader"
+    description: "Der Textbereich 'Aus Liebe und Tradition am Ebnisee' über die Familie."
+    files:
+      - name: familie
+        label: "Familientext verwalten"
+        file: content/familie.json
+        fields:
+          - name: seit
+            label: "Kurzer Hinweistext oben (z.B. 'Seit 1963')"
+            widget: string
+          - name: heading
+            label: "Überschrift"
+            widget: string
+          - name: absatz1
+            label: "Erster Absatz"
+            widget: text
+          - name: absatz2
+            label: "Zweiter Absatz"
+            widget: text
+          - name: namen
+            label: "Namen der Familie"
+            widget: string
+            hint: "Erscheint kursiv unter den Absätzen, z.B. 'Monika, Daniel, Markus & Benjamin Rader'"
+
+  # ----------------------------------------------------------
+  #  EINSTELLUNGEN (mehrteilige Dateisammlung)
+  # ----------------------------------------------------------
+  - name: einstellungen
+    label: "⚙️ Einstellungen"
+    description: "Startseite, Kontaktdaten und allgemeine Seiteninfos."
+    files:
+
+      - name: hero
+        label: "Startseite – Willkommensbereich"
+        file: content/hero.json
+        fields:
+          - name: eyebrow
+            label: "Kurzer Hinweistext über der Hauptüberschrift"
+            widget: string
+            hint: "z.B. 'Klösterle 100 · 73667 Kaisersbach · Seit 1963'"
+          - name: headline_line1
+            label: "Hauptüberschrift – erste Zeile"
+            widget: string
+          - name: headline_line2
+            label: "Hauptüberschrift – zweite Zeile (kursiv hervorgehoben)"
+            widget: string
+          - name: sub
+            label: "Untertitel"
+            widget: text
+          - name: badges
+            label: "Kleine Pillen-Hinweise unter den Buttons"
+            widget: object
+            fields:
+              - { name: badge_1, label: "Hinweis 1 (Teller-Symbol)", widget: string }
+              - { name: badge_2, label: "Hinweis 2 (Bierglas-Symbol)", widget: string }
+              - { name: badge_3, label: "Hinweis 3 (Sitzplätze-Symbol)", widget: string }
+              - { name: badge_4, label: "Hinweis 4 (Haus-Symbol)", widget: string }
+          - name: stats
+            label: "Kennzahlen im Willkommensbereich"
+            widget: object
+            fields:
+              - name: stat_1
+                label: "Erste Kennzahl"
+                widget: object
+                fields:
+                  - { name: num, label: "Zahl (z.B. 4)", widget: string }
+                  - { name: label, label: "Beschriftung (z.B. Bootstypen)", widget: string }
+              - name: stat_2
+                label: "Zweite Kennzahl"
+                widget: object
+                fields:
+                  - { name: num, label: "Zahl (z.B. 280)", widget: string }
+                  - { name: label, label: "Beschriftung (z.B. Sitzplätze)", widget: string }
+              - name: stat_3
+                label: "Dritte Kennzahl"
+                widget: object
+                fields:
+                  - { name: num, label: "Zahl (z.B. 1963)", widget: string }
+                  - { name: label, label: "Beschriftung (z.B. Familienbesitz)", widget: string }
+
+      - name: kontakt
+        label: "Kontakt, Adresse & Öffnungszeiten"
+        file: content/kontakt.json
+        fields:
+          - name: email
+            label: "E-Mail-Adresse"
+            widget: string
+            hint: "Wird im Kontaktbereich und in der Fußzeile als Link angezeigt"
+          - name: betriebsname
+            label: "Betriebsname"
+            widget: string
+          - name: strasse
+            label: "Straße & Hausnummer"
+            widget: string
+          - name: ort
+            label: "PLZ & Ort"
+            widget: string
+          - name: bundesland
+            label: "Bundesland"
+            widget: string
+          - name: saison
+            label: "Saison (z.B. 'Frühjahr – Herbst')"
+            widget: string
+          - name: saison_hinweis
+            label: "Öffnungshinweis (z.B. 'täglich bei schönem Wetter')"
+            widget: string
+            hint: "Kleingeschrieben eingeben – wird an anderer Stelle automatisch großgeschrieben übernommen"
+          - name: bootsvermietung_lage
+            label: "Lage der Bootsvermietung (Tabelle Anfahrt)"
+            widget: string
+            hint: "z.B. 'Südliches Ufer'"
+          - name: biergarten_lage
+            label: "Lage des Biergartens (Tabelle Anfahrt)"
+            widget: string
+            hint: "z.B. 'Ca. 600 m um den See'"
+
+      - name: siteinfo
+        label: "Allgemeine Seiteninfos"
+        file: content/siteinfo.json
+        fields:
+          - name: title
+            label: "Seitentitel (erscheint im Browser-Tab)"
+            widget: string
+          - name: meta_description
+            label: "Kurzbeschreibung für Suchmaschinen"
+            widget: text
+            hint: "Ca. 150 Zeichen – wird von Google in den Suchergebnissen angezeigt."
+          - name: og_title
+            label: "Titel für Vorschaubilder (z.B. bei WhatsApp/Facebook)"
+            widget: string
+          - name: og_description
+            label: "Beschreibung für Vorschaubilder"
+            widget: text

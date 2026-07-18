@@ -1,0 +1,30 @@
+{
+  "cards": {
+    "essen": {
+      "title": "Essen & Trinken",
+      "item_1": "Weißwurstfrühstück",
+      "item_2": "Weizenbier vom Fass",
+      "item_3": "Grill & Holzsteinofen",
+      "item_4": "Frische Kuchen & Kaffeespezialitäten"
+    },
+    "liegewiese": {
+      "title": "Liegewiese & See",
+      "item_1": "Große Liegewiese direkt am See",
+      "item_2": "Direkter Zugang zum Wasser",
+      "item_3": "Ideal für Familien mit Kindern",
+      "item_4": "Seichtes Gewässer zum Baden"
+    },
+    "events": {
+      "title": "Events & Gruppen",
+      "item_1": "Firmenfeiern & Geburtstage",
+      "item_2": "Hochzeiten bis 250 Personen",
+      "item_3": "Gruppenreservierung ab 8 Personen",
+      "item_4": "Individuelle Angebote auf Anfrage"
+    }
+  },
+  "stats": {
+    "stat_1": { "num": "280", "label": "Sitzplätze" },
+    "stat_2": { "num": "250", "label": "Pers. für Events" }
+  },
+  "zitat": "Die Waldschänke bietet Biertische, Einzeltische mit Stühlen und ein Zelt — für jeden Anlass die passende Atmosphäre direkt am See."
+}
