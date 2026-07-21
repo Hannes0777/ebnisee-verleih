@@ -46,6 +46,20 @@ bereits vorbereitet: Dateien, die später über ein Bild- oder Datei-Feld
 hochgeladen werden, landen automatisch in `/uploads/` und sind sofort unter
 diesem Pfad auf der Website abrufbar.
 
+## Kontaktformular (Anfrage-Formular)
+
+Das Formular verschickt echte E-Mails über einen eigenen Cloudflare-Worker
+(`contact-form-ebnisee`) + [Resend](https://resend.com).
+
+> ⚠️ **Vor Übergabe an den echten Kunden unbedingt ändern:** Anfragen landen
+> aktuell testweise bei `ehmann.hannes07@gmail.com`, nicht bei Familie Rader.
+> Umstellen auf die echte Adresse (z.B. `info@biergarten-ebnisee.de`):
+> ```bash
+> cd contact-form-workers/ebnisee
+> echo -n "info@biergarten-ebnisee.de" | npx wrangler secret put TO_EMAIL
+> ```
+> Details (Absenderadresse/Domain-Verifizierung) siehe `contact-form-workers/README.md`.
+
 ## Troubleshooting
 
 | Problem | Lösung |

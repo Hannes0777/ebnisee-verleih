@@ -242,20 +242,32 @@
     const btnText = submitBtn.querySelector('.btn__text');
     if (btnText) btnText.textContent = 'Wird gesendet …';
 
-    // Simulate network (replace with real fetch() when backend ready)
-    setTimeout(() => {
-      showSuccess();
-      form.reset();
-      form.querySelectorAll('.form-group--success, .form-group--error')
-        .forEach(g => g.classList.remove('form-group--success', 'form-group--error'));
-    }, 1000);
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    fetch('https://contact-form-ebnisee.ehmann-hannes07.workers.dev', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    })
+      .then(res => res.json().then(body => ({ ok: res.ok && body.ok, body })))
+      .then(({ ok, body }) => {
+        if (!ok) throw new Error(body?.error || 'Versand fehlgeschlagen');
+        showSuccess();
+        form.reset();
+        form.querySelectorAll('.form-group--success, .form-group--error')
+          .forEach(g => g.classList.remove('form-group--success', 'form-group--error'));
+      })
+      .catch(() => showError());
   });
 
-  function showSuccess() {
+  function resetButton() {
     submitBtn.disabled = false;
     const btnText = submitBtn.querySelector('.btn__text');
     if (btnText) btnText.textContent = 'Anfrage absenden';
+  }
 
+  function showSuccess() {
+    resetButton();
     if (!resultEl) return;
     resultEl.textContent = 'Vielen Dank! Ihre Anfrage ist eingegangen. Wir melden uns so schnell wie möglich bei Ihnen.';
     resultEl.className   = 'form-result form-result--success';
@@ -263,5 +275,14 @@
     resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
     setTimeout(() => { resultEl.hidden = true; }, 9000);
+  }
+
+  function showError() {
+    resetButton();
+    if (!resultEl) return;
+    resultEl.textContent = 'Die Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es später erneut oder rufen Sie uns an.';
+    resultEl.className   = 'form-result form-result--error';
+    resultEl.hidden      = false;
+    resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 })();

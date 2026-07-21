@@ -128,13 +128,14 @@
   }
 
   // ── Fetch everything in parallel ─────────────────────────
-  const [siteinfo, hero, boote, biergarten, familie, kontakt] = await Promise.all([
+  const [siteinfo, hero, boote, biergarten, familie, kontakt, rechtliches] = await Promise.all([
     fetchJSON('content/siteinfo.json'),
     fetchJSON('content/hero.json'),
     fetchJSON('content/boote.json'),
     fetchJSON('content/biergarten.json'),
     fetchJSON('content/familie.json'),
     fetchJSON('content/kontakt.json'),
+    fetchJSON('content/rechtliches.json'),
   ]);
 
   // ── 1. Site meta ──────────────────────────────────────────
@@ -266,6 +267,13 @@
       emailLink.href = `mailto:${kontakt.email}`;
       emailLink.textContent = kontakt.email;
     }
+    const phoneItem = document.getElementById('contact-phone-item');
+    const phoneLink = document.getElementById('contact-phone-link');
+    if (phoneItem && phoneLink && kontakt.telefon) {
+      phoneLink.href = `tel:${kontakt.telefon_href || kontakt.telefon}`;
+      phoneLink.textContent = kontakt.telefon;
+      phoneItem.hidden = false;
+    }
     const addressValue = document.getElementById('contact-address-value');
     if (addressValue && kontakt.strasse != null && kontakt.ort != null) {
       addressValue.innerHTML = `${kontakt.strasse}<br>${kontakt.ort}`;
@@ -284,6 +292,66 @@
     if (footerEmailLink && kontakt.email != null) {
       footerEmailLink.href = `mailto:${kontakt.email}`;
       footerEmailLink.textContent = kontakt.email;
+    }
+  }
+
+  // ── 7. Impressum & Datenschutz (rechtliche Seiten) ───────
+  // Läuft auf jeder Seite mit, füllt aber nur dann etwas, wenn die
+  // entsprechenden IDs/Klassen im Dokument existieren (impressum.html
+  // / datenschutz.html). Adresse/E-Mail kommen aus derselben
+  // kontakt.json wie der Rest der Seite – eine Änderung dort wirkt
+  // sich also automatisch auch hier aus.
+  if (kontakt) {
+    document.querySelectorAll('.legal-name').forEach(el => {
+      if (kontakt.betriebsname != null) el.textContent = kontakt.betriebsname;
+    });
+    document.querySelectorAll('.legal-strasse').forEach(el => {
+      if (kontakt.strasse != null) el.textContent = kontakt.strasse;
+    });
+    document.querySelectorAll('.legal-ort').forEach(el => {
+      if (kontakt.ort != null) el.textContent = kontakt.ort;
+    });
+    document.querySelectorAll('.legal-bundesland').forEach(el => {
+      if (kontakt.bundesland != null) el.textContent = kontakt.bundesland;
+    });
+    document.querySelectorAll('.legal-email-link').forEach(el => {
+      if (kontakt.email != null) {
+        el.href = `mailto:${kontakt.email}`;
+        el.textContent = kontakt.email;
+      }
+    });
+    // Telefonnummer ist optional – bleibt der auffällige Platzhalter
+    // aus dem HTML stehen, solange kontakt.telefon leer ist.
+    document.querySelectorAll('.legal-telefon').forEach(el => {
+      if (kontakt.telefon) {
+        el.textContent = kontakt.telefon;
+        el.classList.remove('legal-placeholder');
+      }
+    });
+  }
+
+  // Angaben, die nur der Websitebetreiber wissen kann (USt-IdNr.,
+  // Handelsregister, vertretungsberechtigte Person) – solange sie im
+  // CMS nicht ausgefüllt sind, bleibt der Platzhalter im HTML stehen.
+  if (rechtliches) {
+    const ustEl = document.getElementById('legal-ustid');
+    if (ustEl && rechtliches.ust_id) {
+      ustEl.textContent = rechtliches.ust_id;
+      ustEl.classList.remove('legal-placeholder');
+    }
+
+    const hrEl = document.getElementById('legal-handelsregister');
+    if (hrEl && (rechtliches.handelsregister_gericht || rechtliches.handelsregister_nummer)) {
+      hrEl.innerHTML =
+        `Registergericht: ${rechtliches.handelsregister_gericht || '[BITTE ERGÄNZEN: Registergericht]'}<br>` +
+        `Registernummer: ${rechtliches.handelsregister_nummer || '[BITTE ERGÄNZEN: Registernummer]'}`;
+      hrEl.classList.remove('legal-placeholder', 'legal-placeholder--block');
+    }
+
+    const vertretungEl = document.getElementById('legal-vertretung');
+    if (vertretungEl && rechtliches.vertretungsberechtigte_person) {
+      vertretungEl.textContent = rechtliches.vertretungsberechtigte_person;
+      vertretungEl.classList.remove('legal-placeholder', 'legal-placeholder--block');
     }
   }
 

@@ -341,6 +341,16 @@ collections:
             label: "E-Mail-Adresse"
             widget: string
             hint: "Wird im Kontaktbereich und in der Fußzeile als Link angezeigt"
+          - name: telefon
+            label: "Telefonnummer (Anzeigeformat, z.B. 07184 293692)"
+            widget: string
+            required: false
+            hint: "Optional. Wird im Kontaktbereich und im Impressum angezeigt, falls ausgefüllt. Leer lassen, wenn keine Telefonnummer veröffentlicht werden soll (im Impressum erscheint dann ein auffälliger Hinweis, dass die Nummer noch ergänzt werden muss)."
+          - name: telefon_href
+            label: "Telefonnummer für Anruf-Links (z.B. +497184293692)"
+            widget: string
+            required: false
+            hint: "Ohne Leerzeichen, mit Ländervorwahl +49, führende 0 der Vorwahl weglassen."
           - name: betriebsname
             label: "Betriebsname"
             widget: string
@@ -386,3 +396,35 @@ collections:
           - name: og_description
             label: "Beschreibung für Vorschaubilder"
             widget: text
+
+  # ----------------------------------------------------------
+  #  RECHTLICHES (Impressum & Datenschutz)
+  # ----------------------------------------------------------
+  - name: rechtliches
+    label: "⚖️ Rechtliches"
+    description: "Angaben für Impressum & Datenschutzerklärung, die nur Sie als Betreiber wissen können (Name/Adresse/E-Mail kommen automatisch aus 'Kontakt, Adresse & Öffnungszeiten'). Bitte vor dem echten Go-Live ausfüllen bzw. prüfen – bis dahin zeigt die Website hier einen auffälligen Platzhalter-Hinweis an."
+    files:
+      - name: rechtliches
+        label: "Rechtliche Angaben verwalten"
+        file: content/rechtliches.json
+        fields:
+          - name: ust_id
+            label: "Umsatzsteuer-Identifikationsnummer (USt-IdNr.)"
+            widget: string
+            required: false
+            hint: "Nur ausfüllen, falls vorhanden (z.B. bei Kleinunternehmerregelung § 19 UStG oft nicht vorhanden). Leer lassen, wenn nicht zutreffend – im Impressum erscheint dann ein Platzhalter-Hinweis."
+          - name: handelsregister_gericht
+            label: "Registergericht"
+            widget: string
+            required: false
+            hint: "Nur ausfüllen, falls ein Handelsregistereintrag besteht, z.B. 'Amtsgericht Stuttgart'. Gastronomie-/Freizeitbetriebe sind oft nicht eintragungspflichtig."
+          - name: handelsregister_nummer
+            label: "Registernummer"
+            widget: string
+            required: false
+            hint: "z.B. 'HRB 12345' – nur ausfüllen, falls eingetragen."
+          - name: vertretungsberechtigte_person
+            label: "Vertretungsberechtigte Person"
+            widget: string
+            required: false
+            hint: "Welche der vier Familienmitglieder (Monika, Daniel, Markus oder Benjamin Rader) ist die rechtlich verantwortliche/vertretungsberechtigte Person gemäß § 5 DDG? Bitte konkreten Namen eintragen, z.B. 'Daniel Rader'. Bis zur Eintragung erscheint im Impressum ein auffälliger Platzhalter-Hinweis."
