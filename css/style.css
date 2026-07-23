@@ -1288,6 +1288,9 @@ a.contact-item__value:hover { color: #fff; text-decoration: underline; }
     color: #fff;
     background: rgba(255,255,255,0.12);
   }
+  .nav--scrolled .nav__link { color: rgba(255,255,255,0.9); background: none; }
+  .nav--scrolled .nav__link:hover,
+  .nav--scrolled .nav__link--active { color: #fff; background: rgba(255,255,255,0.12); }
   .nav__cta {
     margin: 1rem 0 0;
     width: auto;
