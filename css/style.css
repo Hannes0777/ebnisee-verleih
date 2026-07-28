@@ -1305,8 +1305,35 @@ a.contact-item__value:hover { color: #fff; text-decoration: underline; }
 
   .form-row           { grid-template-columns: 1fr; }
   .hero__cta-group    { flex-direction: column; align-items: flex-start; }
+
+  /* Icon + Titel + Liste passen auf schmalen Bildschirmen nicht mehr
+     nebeneinander in eine Reihe (der Titel wird auf eine unangenehm
+     schmale, umgebrochene Spalte gequetscht) - stattdessen Icon und
+     Titel zentriert stapeln, Liste darunter volle Breite. */
+  .feature-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .feature-card__title { margin-bottom: 0.75rem; }
+  .feature-card__list {
+    width: 100%;
+    text-align: left;
+  }
   .boats-grid         { grid-template-columns: 1fr 1fr; }
   .hero__badges       { display: none; }
+}
+
+@media (max-width: 640px) {
+  .price-table-wrap { padding: 1.5rem 1rem 1.25rem; }
+  .price-table { min-width: 0; font-size: 0.8rem; }
+  .price-table th, .price-table td { padding: 0.5rem 0.4rem; }
+}
+
+@media (max-width: 340px) {
+  .price-table-wrap { padding: 1.25rem 0.5rem 1rem; }
+  .price-table { font-size: 0.7rem; }
+  .price-table th, .price-table td { padding: 0.4rem 0.2rem; }
 }
 
 @media (max-width: 480px) {
