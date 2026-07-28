@@ -1201,6 +1201,17 @@ a.contact-item__value:hover { color: #fff; text-decoration: underline; }
 .legal-content a { color: var(--color-lake); text-decoration: underline; }
 .legal-content a:hover { color: var(--color-primary); }
 
+.legal-list { margin: 0 0 1rem; display: flex; flex-direction: column; gap: 0.4rem; }
+.legal-list li { padding-left: 1.1rem; position: relative; color: var(--color-text); }
+.legal-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--color-amber);
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
 .legal-address {
   background: var(--color-white);
   border: 1.5px solid var(--color-border);
